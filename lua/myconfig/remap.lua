@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 -- Find and replace within file
 vim.keymap.set("n", "<Leader>r", ":%s/\\<<C-r><C-w>\\>//gcI<Left><Left><Left><Left>")
 vim.keymap.set("n", "<Leader>e", "yiw:%s/\\<<C-r>0\\>/<C-r>0/gcI<Left><Left><Left><Left>")
