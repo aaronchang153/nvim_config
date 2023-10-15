@@ -1,5 +1,7 @@
 require("myconfig.remap")
 
+vim.g.mapleader = " "
+
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline=true
@@ -15,6 +17,10 @@ vim.opt.expandtab = true
 
 vim.opt.scrolloff = 2
 vim.opt.sidescrolloff = 4
+
+-- persistent undo
+vim.opt.undofile = true
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 if vim.fn.has("gui_running") then
   vim.opt.guifont = "SauceCodePro NFM:h12"
