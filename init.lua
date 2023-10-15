@@ -33,6 +33,8 @@ require("lazy").setup({
 
   "sheerun/vim-polyglot",
 
+  "nvim-tree/nvim-tree.lua",
+
   -- LSP
   {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
   {'neovim/nvim-lspconfig'},
