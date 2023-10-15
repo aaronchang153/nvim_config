@@ -15,3 +15,7 @@ vim.opt.expandtab = true
 
 vim.opt.scrolloff = 2
 vim.opt.sidescrolloff = 4
+
+if vim.fn.has("gui_running") then
+  vim.opt.guifont = "SauceCodePro NFM:h12"
+end
