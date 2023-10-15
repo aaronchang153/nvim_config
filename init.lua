@@ -35,6 +35,9 @@ require("lazy").setup({
 
   "nvim-tree/nvim-tree.lua",
 
+  -- auto pairs
+  "cohama/lexima.vim",
+
   -- LSP
   {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
   {'neovim/nvim-lspconfig'},
