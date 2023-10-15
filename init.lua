@@ -18,6 +18,10 @@ require("lazy").setup({
   -- Colors
   "rktjmp/lush.nvim", -- needed by jellybeans-nvim
   "metalelf0/jellybeans-nvim",
+  "rebelot/kanagawa.nvim",
+  "catppuccin/nvim",
+
+  "lukas-reineke/indent-blankline.nvim",
 
   -- Fuzzy Finder
   {

@@ -25,5 +25,5 @@ if os.getenv("HOME") then
 end
 
 if vim.fn.has("gui_running") then
-  vim.opt.guifont = "SauceCodePro NFM:h12"
+  vim.opt.guifont = "SauceCodePro NFM:h11"
 end
