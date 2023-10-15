@@ -39,6 +39,8 @@ require("lazy").setup({
 
   "nvim-tree/nvim-tree.lua",
 
+  "lewis6991/gitsigns.nvim",
+
   -- auto pairs
   "cohama/lexima.vim",
 
