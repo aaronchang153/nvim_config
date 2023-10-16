@@ -21,28 +21,15 @@ require("lazy").setup({
   "rebelot/kanagawa.nvim",
   "catppuccin/nvim",
 
-  "lukas-reineke/indent-blankline.nvim",
-
   -- Fuzzy Finder
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.4',
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate"
-  },
-  "mbbill/undotree",
-
-  "sheerun/vim-polyglot",
-
-  "nvim-tree/nvim-tree.lua",
-
+  -- Git
+  "tpope/vim-fugitive",
   "lewis6991/gitsigns.nvim",
-
-  -- auto pairs
-  "cohama/lexima.vim",
 
   -- LSP
   {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
@@ -53,6 +40,18 @@ require("lazy").setup({
   {'williamboman/mason.nvim'},
   {'williamboman/mason-lspconfig.nvim'},
 
+  -- Other Language Stuff
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate"
+  },
+  "sheerun/vim-polyglot",
   "ray-x/go.nvim",
+
+  -- QOL
+  "cohama/lexima.vim", -- auto pairs
+  "mbbill/undotree",
+  "nvim-tree/nvim-tree.lua",
+  "lukas-reineke/indent-blankline.nvim",
 })
 
