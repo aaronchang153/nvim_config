@@ -53,5 +53,6 @@ require("lazy").setup({
   "mbbill/undotree",
   "nvim-tree/nvim-tree.lua",
   "lukas-reineke/indent-blankline.nvim",
+  "easymotion/vim-easymotion",
 })
 
