@@ -2,6 +2,7 @@ require("myconfig.remap")
 
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.wrap = false
 vim.opt.cursorline=true
 vim.opt.mouse = 'a'
 
