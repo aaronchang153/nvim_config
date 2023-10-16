@@ -10,7 +10,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Supported LSP servers:
   -- https://github.com/williamboman/mason-lspconfig.nvim#available-lsp-servers
-  ensure_installed = {"lua_ls", "clangd", "gopls", "pyright"},
+  ensure_installed = {"lua_ls"},
   handlers = {
     lsp_zero.default_setup,
   },
