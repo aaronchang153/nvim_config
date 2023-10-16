@@ -59,5 +59,5 @@ require("lazy").setup({
   {"folke/which-key.nvim", event = "VeryLazy"},
 })
 
-vim.keymap.set("n", "<leader>l", ":Lazy<CR>", {desc = "Open Lazy (plugin manager)"})
+vim.keymap.set("n", "<leader>ll", ":Lazy<CR>", {desc = "Open Lazy (plugin manager)"})
 

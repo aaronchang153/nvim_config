@@ -14,3 +14,7 @@ vim.keymap.set("n", "<leader>bb", ":ls<CR>:b<Space>", {desc = "Switch buffer"})
 vim.keymap.set("n", "<leader>bd", ":ls<CR>:bd<Space>", {desc = "Delete buffer"})
 vim.keymap.set("n", "<leader>bn", ":bn<CR>", {desc = "Next buffer"})
 vim.keymap.set("n", "<leader>bp", ":bp<CR>", {desc = "Prev buffer"})
+
+vim.keymap.set("n", "<leader>lc", ":e $MYVIMRC<CR>", {desc = "Open init.lua"})
+
+vim.keymap.set("n", "<leader>cd", ":cd %:p:h<CR>:pwd<CR>", {desc = "cd to current buffer directory"})
