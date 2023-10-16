@@ -45,14 +45,18 @@ require("lazy").setup({
   "sheerun/vim-polyglot",
   "ray-x/go.nvim",
 
+  -- Status/Tabline
+  "nvim-lualine/lualine.nvim",
+
   -- QOL
   "cohama/lexima.vim", -- auto pairs
   "mbbill/undotree",
   "nvim-tree/nvim-tree.lua",
+  "nvim-tree/nvim-web-devicons",
   "lukas-reineke/indent-blankline.nvim",
   "easymotion/vim-easymotion",
   {"akinsho/toggleterm.nvim", version = "*", config = true},
-  {"folke/which-key.nvim", event = "VeryLazy"}
+  {"folke/which-key.nvim", event = "VeryLazy"},
 })
 
 vim.keymap.set("n", "<leader>l", ":Lazy<CR>", {desc = "Open Lazy (plugin manager)"})
