@@ -41,10 +41,7 @@ require("lazy").setup({
   {'williamboman/mason-lspconfig.nvim'},
 
   -- Other Language Stuff
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate"
-  },
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   "sheerun/vim-polyglot",
   "ray-x/go.nvim",
 
@@ -54,6 +51,7 @@ require("lazy").setup({
   "nvim-tree/nvim-tree.lua",
   "lukas-reineke/indent-blankline.nvim",
   "easymotion/vim-easymotion",
-  {"akinsho/toggleterm.nvim", version = "*", config = true}
+  {"akinsho/toggleterm.nvim", version = "*", config = true},
+  {"folke/which-key.nvim", event = "VeryLazy"}
 })
 
