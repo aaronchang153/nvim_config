@@ -54,5 +54,6 @@ require("lazy").setup({
   "nvim-tree/nvim-tree.lua",
   "lukas-reineke/indent-blankline.nvim",
   "easymotion/vim-easymotion",
+  {"akinsho/toggleterm.nvim", version = "*", config = true}
 })
 
