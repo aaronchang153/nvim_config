@@ -66,3 +66,6 @@ require('lspconfig').lua_ls.setup {
     return true
   end
 }
+
+vim.keymap.set("n", "<leader>lm", ":Mason<CR>", {desc = "Open Mason"})
+
