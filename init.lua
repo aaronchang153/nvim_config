@@ -41,10 +41,17 @@ require("lazy").setup({
   {'williamboman/mason.nvim'},
   {'williamboman/mason-lspconfig.nvim'},
 
+  -- DAP
+  {
+    "rcarriga/nvim-dap-ui",
+    dependencies = { "mfussenegger/nvim-dap" }
+  },
+
   -- Other Language Stuff
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   "sheerun/vim-polyglot",
   "ray-x/go.nvim",
+  "simrat39/rust-tools.nvim",
 
   -- Status/Tabline
   "nvim-lualine/lualine.nvim",
