@@ -16,10 +16,11 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   -- Colors
-  "rktjmp/lush.nvim", -- needed by jellybeans-nvim
-  "metalelf0/jellybeans-nvim",
+  "nanotech/jellybeans.vim",
+  "ayu-theme/ayu-vim",
   "rebelot/kanagawa.nvim",
   "catppuccin/nvim",
+  "folke/tokyonight.nvim",
 
   -- Fuzzy Finder
   {
