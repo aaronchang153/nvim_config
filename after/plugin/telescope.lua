@@ -6,4 +6,14 @@ vim.keymap.set("n", "<leader>ph", builtin.help_tags, {desc = "Telescope: help_ta
 vim.keymap.set("n", "<leader>ps", builtin.colorscheme, {desc = "Telescope: colorscheme"})
 vim.keymap.set("n", "<leader>pt", builtin.filetypes, {desc = "Telescope: filetypes"})
 
-vim.keymap.set("n", "<C-p>", builtin.git_files, {desc = "Telescope: git_files"})
+function HandleCtrlP()
+  local path = vim.loop.cwd() .. "/.git"
+  local ok, _ = vim.loop.fs_stat(path)
+  if ok then
+    builtin.git_files()
+  else
+    builtin.find_files()
+  end
+end
+
+vim.keymap.set("n", "<C-p>", HandleCtrlP, {desc = "Telescope: git_files"})
