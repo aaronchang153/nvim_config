@@ -58,6 +58,7 @@ require("lazy").setup({
   -- Other Language Stuff
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   "sheerun/vim-polyglot",
+  "folke/neodev.nvim",
   "ray-x/go.nvim",
   "simrat39/rust-tools.nvim",
 
