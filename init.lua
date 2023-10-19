@@ -41,6 +41,14 @@ require("lazy").setup({
   {'williamboman/mason.nvim'},
   {'williamboman/mason-lspconfig.nvim'},
 
+  {
+    "SmiteshP/nvim-navbuddy",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+      "MunifTanjim/nui.nvim"
+    },
+  },
+
   -- DAP
   {
     "rcarriga/nvim-dap-ui",
