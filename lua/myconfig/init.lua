@@ -18,10 +18,10 @@ vim.opt.scrolloff = 2
 vim.opt.sidescrolloff = 4
 
 -- persistent undo
-if os.getenv("HOME") then
-  vim.opt.undofile = true
-  vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-end
+vim.opt.undofile = true
+vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
+vim.opt.undolevels = 1000
+vim.opt.undoreload = 10000
 
 if vim.fn.has("gui_running") then
   vim.opt.guifont = "SauceCodePro NFM:h11"
