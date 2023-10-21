@@ -4,7 +4,27 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.keymap.set("n", "<leader>pe", vim.cmd.NvimTreeToggle, {desc = "Toggle NvimTree"})
 
-require("nvim-tree").setup({
+local tree = require("nvim-tree")
+
+local function my_on_attach(bufnr)
+    local api = require "nvim-tree.api"
+
+    local function opts(desc)
+      return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+    end
+
+    local function switch_to_cwd()
+      tree.change_dir(vim.fn.getcwd())
+    end
+
+    -- default mappings
+    api.config.mappings.default_on_attach(bufnr)
+
+    -- custom mappings
+    vim.keymap.set('n', '<C-h>', switch_to_cwd, opts('Focus cwd'))
+end
+
+tree.setup({
   renderer = {
     icons = {
       show = {
@@ -18,6 +38,7 @@ require("nvim-tree").setup({
       },
     },
   },
+  on_attach = my_on_attach,
 })
 
 -- A bunch of crazy stuff to auto close when it's the last window
