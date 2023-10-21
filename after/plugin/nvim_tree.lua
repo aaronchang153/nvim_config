@@ -7,21 +7,21 @@ vim.keymap.set("n", "<leader>pe", vim.cmd.NvimTreeToggle, {desc = "Toggle NvimTr
 local tree = require("nvim-tree")
 
 local function my_on_attach(bufnr)
-    local api = require "nvim-tree.api"
+  local api = require "nvim-tree.api"
 
-    local function opts(desc)
-      return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
-    end
+  local function opts(desc)
+    return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+  end
 
-    local function switch_to_cwd()
-      tree.change_dir(vim.fn.getcwd())
-    end
+  local function switch_to_cwd()
+    tree.change_dir(vim.fn.getcwd())
+  end
 
-    -- default mappings
-    api.config.mappings.default_on_attach(bufnr)
+  -- default mappings
+  api.config.mappings.default_on_attach(bufnr)
 
-    -- custom mappings
-    vim.keymap.set('n', '<C-h>', switch_to_cwd, opts('Focus cwd'))
+  -- custom mappings
+  vim.keymap.set('n', '<C-h>', switch_to_cwd, opts('Focus cwd'))
 end
 
 tree.setup({
