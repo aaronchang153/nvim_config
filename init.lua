@@ -49,6 +49,12 @@ require("lazy").setup({
   {'williamboman/mason.nvim'},
   {'williamboman/mason-lspconfig.nvim'},
 
+  -- LSP (diagnostics)
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+
   -- Other Language Stuff
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   "sheerun/vim-polyglot",
@@ -81,7 +87,6 @@ require("lazy").setup({
   "easymotion/vim-easymotion",
   {"akinsho/toggleterm.nvim", version = "*", config = true},
   {"folke/which-key.nvim", event = "VeryLazy"},
-  "petertriho/nvim-scrollbar",
 })
 
 vim.keymap.set("n", "<leader>ll", ":Lazy<CR>", {desc = "Open Lazy (plugin manager)"})
