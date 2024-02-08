@@ -54,6 +54,7 @@ require("lazy").setup({
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
+  "simrat39/symbols-outline.nvim",
 
   -- Other Language Stuff
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
