@@ -88,6 +88,7 @@ require("lazy").setup({
   "easymotion/vim-easymotion",
   {"akinsho/toggleterm.nvim", version = "*", config = true},
   {"folke/which-key.nvim", event = "VeryLazy"},
+  "folke/zen-mode.nvim",
 })
 
 vim.keymap.set("n", "<leader>ll", ":Lazy<CR>", {desc = "Open Lazy (plugin manager)"})
