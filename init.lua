@@ -78,6 +78,7 @@ require("lazy").setup({
     --},
     config=true,
   },
+  { "j-hui/fidget.nvim", config = true },
 
   -- QOL
   "cohama/lexima.vim", -- auto pairs
