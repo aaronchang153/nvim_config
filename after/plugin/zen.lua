@@ -1,3 +1,11 @@
 local zen_mode = require("zen-mode")
 
-vim.keymap.set("n", "<leader>z", zen_mode.toggle, {desc = "Toggle Zen Mode"})
+local function ToggleZen()
+  zen_mode.toggle({
+    window = {
+      width = 120
+    },
+  })
+end
+
+vim.keymap.set("n", "<leader>z", ToggleZen, {desc = "Toggle Zen Mode"})
