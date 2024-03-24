@@ -1,5 +1,5 @@
 function SetColorscheme(color)
-  color = color or "kanagawa-wave"
+  color = color or "catppuccin-mocha"
 
   vim.opt.termguicolors = true
   vim.cmd.colorscheme(color)
