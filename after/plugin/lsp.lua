@@ -36,3 +36,13 @@ cmp.setup({
 
 vim.keymap.set("n", "<leader>lm", ":Mason<CR>", {desc = "Open Mason"})
 
+local diagnostics_active = true
+local function toggle_diagnostics()
+  diagnostics_active = not diagnostics_active
+  if diagnostics_active then
+    vim.diagnostic.show()
+  else
+    vim.diagnostic.hide()
+  end
+end
+vim.keymap.set('n', '<leader>lt', toggle_diagnostics, {desc = "Toggle LSP diagnostics"})
