@@ -63,3 +63,5 @@ cmp.setup({
     end,
   },
 })
+
+vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, {silent=true, desc="Format buffer (LSP)"})
