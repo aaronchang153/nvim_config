@@ -59,7 +59,6 @@ require("lazy").setup({
   "sheerun/vim-polyglot",
   "folke/neodev.nvim",
   "ray-x/go.nvim",
-  "simrat39/rust-tools.nvim",
 
   -- Status/Tabline
   "nvim-lualine/lualine.nvim",
