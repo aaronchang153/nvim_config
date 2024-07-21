@@ -64,4 +64,14 @@ cmp.setup({
   },
 })
 
+require("lspsaga").setup({
+  lightbulb = {
+    enable = false,
+  },
+  outline = {
+    auto_preview = false,
+  },
+})
+
 vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, {silent=true, desc="Format buffer (LSP)"})
+vim.keymap.set('n', '<leader>o', ":Lspsaga outline<CR>", {silent=true, desc="Toggle outline"})

@@ -53,6 +53,7 @@ require("lazy").setup({
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
+  "nvimdev/lspsaga.nvim",
 
   -- Other Language Stuff
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
