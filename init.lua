@@ -66,7 +66,11 @@ require("lazy").setup({
   { "j-hui/fidget.nvim", config = true },
 
   -- QOL
-  "cohama/lexima.vim", -- auto pairs
+  {
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true,
+  },
   "mbbill/undotree",
   "nvim-tree/nvim-tree.lua",
   "nvim-tree/nvim-web-devicons",
