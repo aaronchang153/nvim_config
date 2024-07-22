@@ -22,6 +22,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', opts)
     vim.keymap.set({'n', 'x'}, '<F3>', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', opts)
     vim.keymap.set('n', '<F4>', '<cmd>lua vim.lsp.buf.code_action()<cr>', opts)
+
+    vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, {silent=true, desc="Format buffer (LSP)"})
+    if vim.lsp.inlay_hint ~= nil then
+      vim.keymap.set('n', '<leader>li', function ()
+        vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+      end, {silent=true, desc="Toggle inlay hints"})
+    end
+    vim.keymap.set('n', '<leader>o', ":Lspsaga outline<CR>", {silent=true, desc="Toggle outline"})
   end
 })
 
@@ -72,12 +80,3 @@ require("lspsaga").setup({
     auto_preview = false,
   },
 })
-
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format, {silent=true, desc="Format buffer (LSP)"})
-if vim.lsp.inlay_hint ~= nil then
-  vim.keymap.set('n', '<leader>li', function ()
-    vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
-  end, {silent=true, desc="Toggle inlay hints"})
-end
-
-vim.keymap.set('n', '<leader>o', ":Lspsaga outline<CR>", {silent=true, desc="Toggle outline"})
