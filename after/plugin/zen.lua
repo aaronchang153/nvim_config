@@ -5,12 +5,6 @@ local function ToggleZen()
     window = {
       width = 120
     },
-    on_open = function(_)
-      vim.cmd("Barbecue hide")
-    end,
-    on_close = function()
-      vim.cmd("Barbecue show")
-    end,
   })
 end
 
