@@ -17,6 +17,8 @@ vim.opt.expandtab = true
 vim.opt.scrolloff = 2
 vim.opt.sidescrolloff = 4
 
+vim.opt.signcolumn = "yes"
+
 -- persistent undo
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
