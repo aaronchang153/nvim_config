@@ -26,6 +26,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<leader>lf', '<cmd>lua vim.lsp.buf.format({async = true})<cr>', {silent=true, desc="Format buffer (LSP)"})
     vim.keymap.set('n', '<leader>o', ":Lspsaga outline<CR>", {silent=true, desc="Toggle outline"})
 
+    vim.keymap.set('i', '<C-h>', '<cmd>lua vim.lsp.buf.signature_help()<cr>', opts)
+
     if vim.lsp.inlay_hint ~= nil then
       vim.keymap.set('n', '<leader>li', function ()
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
