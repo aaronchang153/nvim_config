@@ -19,6 +19,13 @@ vim.opt.sidescrolloff = 4
 
 vim.opt.signcolumn = "yes"
 
+vim.opt.listchars = {
+  tab = '> ',
+  trail = '-',
+  nbsp = '+',
+}
+vim.opt.list = true
+
 -- persistent undo
 vim.opt.undofile = true
 vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir"
