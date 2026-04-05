@@ -5,10 +5,19 @@ local highlight = {
 }
 
 local hooks = require "ibl.hooks"
--- create the highlight groups in the highlight setup hook, so they are reset
--- every time the colorscheme changes
+
+-- Triggered every time the colorscheme changes
 hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
-    vim.api.nvim_set_hl(0, "CustomIndentHighlight", { fg = "#313244" })
+    local current_scheme = vim.g.colors_name or ""
+
+    if current_scheme:find("kanagawa") then
+        -- Specific color for Kanagawa
+        vim.api.nvim_set_hl(0, "CustomIndentHighlight", { fg = "#313244" })
+    else
+        -- Fallback: Link to the default IBL highlight or another group
+        -- This effectively uses the "default" look for other schemes
+        vim.api.nvim_set_hl(0, "CustomIndentHighlight", { link = "IblIndent" })
+    end
 end)
 
 require("ibl").setup {
