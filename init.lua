@@ -14,7 +14,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Plugin versions were verified on nvim v0.12.0
+-- Plugin versions were verified on nvim v0.11.7
 require("lazy").setup({
   -- Colors
   "ayu-theme/ayu-vim",
@@ -71,10 +71,11 @@ require("lazy").setup({
   {'mason-org/mason-lspconfig.nvim', commit = '25f609e7fca78af7cede4f9fa3af8a94b1c4950b'},
 
   {
-    "nvim-treesitter/nvim-treesitter",
-    tag = "v0.10.0",
-    build = ":TSUpdate",
-  }, 
+    'nvim-treesitter/nvim-treesitter',
+    commit = '42fc28ba918343ebfd5565147a42a26580579482',
+    lazy = false,
+    build = ':TSUpdate',
+  },
 
   -- LSP (diagnostics)
   {
