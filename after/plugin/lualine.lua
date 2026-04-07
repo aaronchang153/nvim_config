@@ -2,7 +2,7 @@ require('lualine').setup {
   options = {
     icons_enabled = true,
     theme = 'auto',
-    component_separators = { left = '|', right = '|'},
+    component_separators = { left = ' ', right = ' '},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
       statusline = {},
@@ -21,12 +21,13 @@ require('lualine').setup {
     lualine_a = {'mode'},
     lualine_b = {
       {'branch', icons_enabled = true}, -- writing this out to remind myself how to disable icons
+    },
+    lualine_c = {'filename'}, -- show relative path
+    lualine_x = {
       'diff',
       'diagnostics',
     },
-    lualine_c = {'filename'}, -- show relative path
-    lualine_x = {'encoding', 'filetype'},
-    lualine_y = {'progress'},
+    lualine_y = {'filetype'},
     lualine_z = {'location'}
   },
   inactive_sections = {
