@@ -18,3 +18,5 @@ vim.keymap.set("n", "<leader>bp", ":bp<CR>", {desc = "Prev buffer"})
 vim.keymap.set("n", "<leader>lc", ":e $MYVIMRC<CR>", {desc = "Open init.lua"})
 
 vim.keymap.set("n", "<leader>cd", ":cd %:p:h<CR>:pwd<CR>", {desc = "cd to current buffer directory"})
+
+vim.keymap.set("n", "<leader>lw", ":set wrap!<CR>:set linebreak!<CR>:set breakindent!<CR>", {silent = true, desc = "Toggle line wrap"})
